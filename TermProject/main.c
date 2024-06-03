@@ -865,12 +865,10 @@ void enqueue_by_arrive_time(Queue* ready_queue, process* process_list[PROCESS_CO
 void init() {
     clear_screen();
     
-    printf("-----------------------------------------------------------------------------------------------------------------------\n");
-    printf("|  CPU Scheduling Simulator                                                                                           |\n");
-    printf("|                                                                                                                     |\n");
-    printf("|  * %d번을 입력하면 스케쥴링이 진행됩니다.                                                                            |\n",1);
-    printf("|                                                                                                                     |\n");
-    printf("-----------------------------------------------------------------------------------------------------------------------\n");
+
+    printf("CPU Scheduling Simulator\n");
+    printf("Enter % d to start scheduling.\n",1);
+  
 
 
     int n;
@@ -894,14 +892,13 @@ int result_view() {
 
     while (1) {
         clear_screen();
-        printf("-----------------------------------------------------------------------------------------------------------------------\n");
-        printf("| 스케쥴링 완료.                                                                                                       |\n");
-        printf("| 다시 시작하려면 %d를 입력                                                                                             |\n", 0);
-        printf("| 스케줄러별 Gantt Chart를 확인하려면, 해당 스케줄러의 번호를 입력                                                     |\n");
-        printf("| 프로세스 정보를 확인하려면 %d 입력                                                                                    |\n", 7);
-        printf("| 프로그램을 종료하려면 %d 입력                                                                                        |\n", -1);
-        printf("-----------------------------------------------------------------------------------------------------------------------\n");
+        printf("Scheduling completed.\n");
+        printf("Enter %d to restart\n", 0);
+        printf("Enter the number of the scheduler to view its Gantt Chart\n");
+        printf("Enter %d to view process information\n", 7);
+        printf("Enter %d to exit the program\n", -1);
 
+        printf("\n");
         printf("\n");
         
 
@@ -1034,7 +1031,7 @@ void print_gantt_chart(int algorithm_index, int time_units) {
     printf("\n");
     printf("\n");
     printf("\n");
-    printf("되돌아가려면 %d 입력", 1);
+    printf("Enter %d to go back\n", 1);
 
     int num;
     do {
@@ -1059,11 +1056,10 @@ void show_process() {
     int n;
     process* temp;
     while (1) {
-        printf("-----------------------------------------------------------------------------------------------------------------------\n");
-        printf("| <프로세스 정보>                                                                                                      |\n");
-        printf("| 되돌아가려면 %d를 입력                                                                                                |\n", 0);  
-        printf("|                                                                                                                      |\n");
-        printf("-----------------------------------------------------------------------------------------------------------------------\n");
+        printf("<Process Information>\n");
+        printf("Enter %d to go back\n", 0);
+
+        printf("\n");
 
         printf("\n");
 
